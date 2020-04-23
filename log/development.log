@@ -17639,3 +17639,321 @@ Processing by UsersController#top as HTML
 Completed 200 OK in 864ms (Views: 852.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 10.0.2.2 at 2020-04-23 05:38:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#top as HTML
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 928ms (Views: 907.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-04-23 05:38:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#top as HTML
+  Rendering users/top.html.erb within layouts/application
+  Rendered users/top.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:32
+Completed 200 OK in 217ms (Views: 209.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-04-23 05:39:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/users/4
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users/4" for 10.0.2.2 at 2020-04-23 05:39:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:50
+  Rendered users/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 159ms (Views: 130.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/search" for 10.0.2.2 at 2020-04-23 05:39:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  Rendered users/search.html.erb within layouts/application (256.2ms)
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `option_for_select' for #<#<Class:0x0000000005a2e6f8>:0x00007f9a40ddbc38>
+Did you mean?  options_for_select):
+    1: <%= form_tag(search_path, :method => "get") do  %>
+    2: 	<%= select_tag(:option, option_for_select([["user","1"],["post","2"]])) %>
+    3: 	<%= text_field_tag :search %>
+    4: 	<%= submit_tag "検索" %>
+    5: <% end %>
+  
+app/views/users/search.html.erb:2:in `block in _app_views_users_search_html_erb__2697972075873239581_70150245021220'
+app/views/users/search.html.erb:1:in `_app_views_users_search_html_erb__2697972075873239581_70150245021220'
+Started GET "/search" for 10.0.2.2 at 2020-04-23 05:39:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  Rendered users/search.html.erb within layouts/application (175.2ms)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `option_for_select' for #<#<Class:0x0000000005a2e6f8>:0x00007f9a41a88e68>
+Did you mean?  options_for_select):
+    1: <%= form_tag(search_path, :method => "get") do  %>
+    2: 	<%= select_tag(:option, option_for_select([["user","1"],["book","2"]])) %>
+    3: 	<%= text_field_tag :search %>
+    4: 	<%= submit_tag "検索" %>
+    5: <% end %>
+  
+app/views/users/search.html.erb:2:in `block in _app_views_users_search_html_erb__2697972075873239581_70150251631220'
+app/views/users/search.html.erb:1:in `_app_views_users_search_html_erb__2697972075873239581_70150251631220'
+Started GET "/search" for 10.0.2.2 at 2020-04-23 05:40:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  Rendered users/search.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 138ms (Views: 132.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/search" for 10.0.2.2 at 2020-04-23 05:43:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  Rendered users/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 118ms (Views: 109.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/search" for 10.0.2.2 at 2020-04-23 05:48:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  Rendered users/search.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 158ms (Views: 148.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search" for 10.0.2.2 at 2020-04-23 05:49:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  Rendered users/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 132ms (Views: 126.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search" for 10.0.2.2 at 2020-04-23 05:52:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  Rendered users/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 115ms (Views: 105.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/search" for 10.0.2.2 at 2020-04-23 06:28:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 3.3ms)
+
+
+  
+NameError (uninitialized constant Book::Post):
+  
+app/models/book.rb:6:in `<class:Book>'
+app/models/book.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:49:in `search'
+Started GET "/search" for 10.0.2.2 at 2020-04-23 06:29:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/users/search.html.erb:49
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/search.html.erb:53
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/search.html.erb:53
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/search.html.erb:53
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/search.html.erb:53
+  Rendered users/search.html.erb within layouts/application (905.8ms)
+Completed 200 OK in 1127ms (Views: 1086.8ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&option=2&search=&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 06:29:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"2", "search"=>"", "commit"=>"検索"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE (title LIKE '%')[0m
+  ↳ app/views/users/search.html.erb:49
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/search.html.erb:53
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/search.html.erb:53
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/search.html.erb:53
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/search.html.erb:53
+  Rendered users/search.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 157ms (Views: 148.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 06:30:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  Rendered users/search.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    19: 							</tr>
+    20: 						</thead>
+    21: 						<tbody>
+    22: 							<% @users.each do |user| %>
+    23: 								<tr>
+    24: 									<td>
+    25: 										<%= attachment_image_tag user, :profile_image, :fill, 40, 40, format: "jpeg", allback: "no_image.jpeg" %>
+  
+app/views/users/search.html.erb:22:in `_app_views_users_search_html_erb__112316084506788592_70186566770760'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 06:32:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"", "commit"=>"検索"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  Rendered users/search.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    19: 							</tr>
+    20: 						</thead>
+    21: 						<tbody>
+    22: 							<% @users.each do |user| %>
+    23: 								<tr>
+    24: 									<td>
+    25: 										<%= attachment_image_tag user, :profile_image, :fill, 40, 40, format: "jpeg", allback: "no_image.jpeg" %>
+  
+app/views/users/search.html.erb:22:in `_app_views_users_search_html_erb__112316084506788592_70186559216520'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 06:33:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"", "commit"=>"検索"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%')[0m
+  ↳ app/views/users/search.html.erb:22
+  Rendered users/search.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 555ms (Views: 514.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&option=1&search=&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 06:33:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"", "commit"=>"検索"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%')[0m
+  ↳ app/views/users/search.html.erb:15
+  Rendered users/search.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 119ms (Views: 107.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&option=1&search=%E3%81%86%E3%81%88%E3%81%A0&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 06:34:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"うえだ", "commit"=>"検索"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%うえだ')[0m
+  ↳ app/views/users/search.html.erb:15
+  Rendered users/search.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 142ms (Views: 131.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-23 06:34:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:63
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:63
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:63
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:63
+  Rendered books/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 162ms (Views: 136.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 06:34:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%ueda')[0m
+  ↳ app/views/users/search.html.erb:15
+  Rendered users/search.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 168ms (Views: 160.9ms | ActiveRecord: 1.2ms)
+
+

@@ -17,8 +17,6 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-var title = "javascriptが使えるって！？";
-alert(title);
 
 $(document).ready(function(){
 	$('.jquery').on('click', function(){

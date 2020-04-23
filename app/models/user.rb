@@ -8,4 +8,12 @@ class User < ApplicationRecord
   validates :introduction, length: { maximum: 50 }
   attachment :profile_image
   has_many :books, dependent: :destroy
+
+  def User.search(search, user_or_book)
+  	if user_or_book == "1"
+  		User.where(["name LIKE ?", "%#{search}"])
+  	else
+  		User.all
+  	end
+  end
 end
