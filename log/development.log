@@ -17957,3 +17957,269 @@ Processing by UsersController#search as HTML
 Completed 200 OK in 168ms (Views: 160.9ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 08:57:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%ueda')[0m
+  ↳ app/views/users/search.html.erb:15
+  Rendered users/search.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 670ms (Views: 635.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 08:58:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%ueda')[0m
+  ↳ app/views/users/search.html.erb:15
+  Rendered users/search.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 117ms (Views: 106.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:10:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 2.6ms)
+
+
+  
+NameError (undefined local variable or method `how_search' for #<Class:0x00000000049f9120>
+Did you mean?  search):
+  
+app/models/user.rb:14:in `search'
+app/controllers/users_controller.rb:48:in `search'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:15:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 4.1ms)
+
+
+  
+NameError (undefined local variable or method `how_search' for #<Class:0x00000000037160a8>
+Did you mean?  search):
+  
+app/models/user.rb:14:in `search'
+app/controllers/users_controller.rb:48:in `search'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:16:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+NameError (undefined local variable or method `how_search' for #<Class:0x00000000037160a8>
+Did you mean?  search):
+  
+app/models/user.rb:14:in `search'
+app/controllers/users_controller.rb:48:in `search'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:16:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `how_search' for #<Class:0x00000000037160a8>
+Did you mean?  search):
+  
+app/models/user.rb:14:in `search'
+app/controllers/users_controller.rb:48:in `search'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:16:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `how_search' for #<Class:0x00000000037160a8>
+Did you mean?  search):
+  
+app/models/user.rb:14:in `search'
+app/controllers/users_controller.rb:48:in `search'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:17:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 4.2ms)
+
+
+  
+NameError (undefined local variable or method `how_search' for #<Class:0x00000000047619f8>
+Did you mean?  search):
+  
+app/models/user.rb:14:in `search'
+app/controllers/users_controller.rb:48:in `search'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:18:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.4ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 3)):
+  
+app/models/user.rb:12:in `search'
+app/controllers/users_controller.rb:48:in `search'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:20:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 3)):
+  
+app/models/user.rb:12:in `search'
+app/controllers/users_controller.rb:48:in `search'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:26:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.7ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 3)):
+  
+app/models/user.rb:12:in `search'
+app/controllers/users_controller.rb:48:in `search'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:27:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.8ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 3)):
+  
+app/models/user.rb:13:in `search'
+app/controllers/users_controller.rb:48:in `search'
+Started GET "/search?utf8=%E2%9C%93&option=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:28:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/search.html.erb:15
+  Rendered users/search.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 512ms (Views: 481.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/books" for 10.0.2.2 at 2020-04-23 09:28:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:7
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:59
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:63
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:63
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:63
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:63
+  Rendered books/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 159ms (Views: 138.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&option=1&choice=4&search=ued&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:29:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "choice"=>"4", "search"=>"ued", "commit"=>"検索"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE 'ued')[0m
+  ↳ app/views/users/search.html.erb:15
+  Rendered users/search.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 116ms (Views: 101.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&option=1&choice=1&search=ueda&commit=%E6%A4%9C%E7%B4%A2" for 10.0.2.2 at 2020-04-23 09:29:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "option"=>"1", "choice"=>"1", "search"=>"ueda", "commit"=>"検索"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  Rendering users/search.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%ueda%')[0m
+  ↳ app/views/users/search.html.erb:15
+  Rendered users/search.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 250ms (Views: 239.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/4" for 10.0.2.2 at 2020-04-23 09:29:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/views/users/show.html.erb:50
+  Rendered users/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 210ms (Views: 164.4ms | ActiveRecord: 1.7ms)
+
+
